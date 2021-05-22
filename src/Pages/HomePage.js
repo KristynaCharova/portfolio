@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Particles from "../Components/Particles";
+import Particle from "../Components/Particle";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -8,8 +8,8 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 function HomePage() {
   return (
     <HomePageStyled>
-      <div className="p-particles-js">
-        <Particles />
+      <div className="particle-con">
+        <Particle />
       </div>
       <div className="typography">
         <h1>
@@ -40,12 +40,6 @@ const HomePageStyled = styled.header`
   width: 100%;
   height: 100vh;
   position: relative;
-
-  .p-particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 
   .typography {
     position: absolute;
