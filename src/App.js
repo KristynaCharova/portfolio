@@ -1,14 +1,12 @@
 import styled from "styled-components";
+import Sidebar from "./Components/Sitebar";
 
-export default function App() {
-  const AppStyled = styled.div`
-    background-color: pink;
-  `;
+function App() {
   return (
-    <AppStyled>
-      <header className="App-header">
-        <h1>Portfolio</h1>
-      </header>
-    </AppStyled>
+    <div className="App">
+      <Sidebar />
+    </div>
   );
 }
+
+export default App;
