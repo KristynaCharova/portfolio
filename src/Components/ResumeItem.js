@@ -18,7 +18,9 @@ function ResumeItem({ year, title, subTitle, text }) {
 
 const ResumeItemStyled = styled.div`
   display: flex;
-  padding-bottom: 3rem;
+  &:not(:last-child) {
+    padding-bottom: 3rem;
+  }
   .left-content {
     width: 50%;
     padding-left: 20px;
