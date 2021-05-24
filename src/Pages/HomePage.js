@@ -13,7 +13,7 @@ function HomePage() {
       </div>
       <div className="typography">
         <h1>
-          Hi I´m <span>Lorem Ipsum</span>
+          Hi, I´m <span>Lorem Ipsum</span>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nihil
             voluptates ea dolore vel repellat? Quia tenetur non quam

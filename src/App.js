@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import Sidebar from "./Components/Sitebar";
 import HomePage from "./Pages/HomePage";
@@ -6,13 +8,49 @@ import ResumePage from "./Pages/ResumePage";
 import PortfoliosPage from "./Pages/PortfoliosPage";
 import BlogsPage from "./Pages/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
+import Brightness4Icon from "@material-ui/icons/Brightness4";
+import Switch from "@material-ui/core/Switch";
 
-import { Route, Switch } from "react-router";
+import { Route, Switch as Switching } from "react-router";
 
 function App() {
+  const [theme, setTheme] = useState("dark-theme");
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
+  const themeToggler = () => {
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+      setChecked(false);
+    } else {
+      setTheme("light-theme");
+      setChecked(true);
+    }
+  };
+
   return (
     <div className="App">
       <Sidebar />
+      <div className="theme">
+        <div className="light-dark-mode">
+          <div className="left-content">
+            <Brightness4Icon />
+          </div>
+          <div className="right-content">
+            <Switch
+              value=""
+              checked={checked}
+              inputProps={{ "aria-label": "" }}
+              size="medium"
+              onClick={themeToggler}
+            />
+          </div>
+        </div>
+      </div>
+
       <MainContentStyled>
         <div className="lines">
           <div className="line-1"></div>
@@ -21,7 +59,7 @@ function App() {
           <div className="line-4"></div>
         </div>
 
-        <Switch>
+        <Switching>
           <Route path="/" exact>
             <HomePage />
           </Route>
@@ -40,7 +78,7 @@ function App() {
           <Route path="/contact" exact>
             <ContactPage />
           </Route>
-        </Switch>
+        </Switching>
       </MainContentStyled>
     </div>
   );
