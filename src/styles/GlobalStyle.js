@@ -63,6 +63,8 @@ const GlobalStyle = createGlobalStyle`
 .u-margin-bottom{
     margin-bottom: 4rem;
 }
+
+
 `;
 
 export default GlobalStyle;
