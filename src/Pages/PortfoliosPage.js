@@ -18,6 +18,7 @@ function PortfoliosPage() {
     }
     const filtredData = portfolios.filter((item) => item.category === button);
     setMenuItems(filtredData);
+    setButtons(allButtons);
   };
 
   return (
