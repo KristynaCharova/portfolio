@@ -8,7 +8,6 @@ import ResumePage from "./Pages/ResumePage";
 import PortfoliosPage from "./Pages/PortfoliosPage";
 import BlogsPage from "./Pages/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
 import MenuIcon from "@material-ui/icons/Menu";
 import Switch from "@material-ui/core/Switch";
 import { IconButton } from "@material-ui/core";
@@ -38,15 +37,13 @@ function App() {
       <Sidebar navToggle={navToggle} />
       <div className="theme">
         <div className="light-dark-mode">
-          <div className="left-content">
-            <Brightness4Icon />
-          </div>
           <div className="right-content">
             <Switch
               value=""
               checked={checked}
               inputProps={{ "aria-label": "" }}
               size="medium"
+              color="default"
               onClick={themeToggler}
             />
           </div>

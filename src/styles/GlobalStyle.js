@@ -96,13 +96,20 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
 
-  h1 {
-   font-size: 3rem;
-   color: var(--white-color);
-   span {
-    font-size: 3rem;
-   }
-  }
+  h1{
+    font-size: 4rem;
+    color: var(--white-color);
+    span{
+        font-size: 4rem;
+        @media screen and (max-width: 550px){
+            font-size: 3rem
+        }
+    }
+    @media screen and (max-width: 502px){
+        font-size: 3rem
+    }
+}
+
 
   span {
     color: var(--primary-color);
@@ -114,10 +121,7 @@ const GlobalStyle = createGlobalStyle`
       padding-bottom: 0.6rem;
     }
 
-  //Utilities
-.u-margin-bottom{
-    margin-bottom: 4rem;
-}
+
 
 //Floating Togglers
 .light-dark-mode {
@@ -125,25 +129,19 @@ const GlobalStyle = createGlobalStyle`
     right: 0;
     top: 50%;
     background-color: var(--background-light-color-2);
-    width: 6rem;
+    width: 3rem;
     height: 1.7rem;
     z-index: 15;
     display: flex;
     align-items: center;
     justify-content: center;
-    svg {
-      display: flex;
-      align-items: center;
-      font-size: 1.3rem;
-      color: var(--white-color);
-    }
   }
 
  //Nav Toggler
   .ham-burger-menu{
       position: absolute;
       right: 5%;
-      top: 3%; 
+      top: 3%;
       display: none;
       z-index: 15;
       svg{

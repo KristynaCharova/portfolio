@@ -43,7 +43,7 @@ function ContactPage() {
                   rows="10"
                 ></textarea>
               </div>
-              <div className="form-field">
+              <div className="form-field form-button">
                 <PrimaryButton title="Send email" />
               </div>
             </form>
@@ -79,9 +79,18 @@ const ContactPageStyled = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
+    @media screen and (max-width: 978px) {
+      grid-template-columns: repeat(1, 1fr);
+      .form-button {
+        margin-bottom: 3rem;
+      }
+    }
     .right-content {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      @media screen and (max-width: 550px) {
+        width: 70%;
+      }
     }
     .contact-title {
       h4 {
@@ -92,6 +101,9 @@ const ContactPageStyled = styled.section`
     }
     .form {
       width: 100%;
+      @media screen and (max-width: 550px) {
+        width: 90%;
+      }
       .form-field {
         margin-top: 0.2rem;
         position: relative;
@@ -123,6 +135,9 @@ const ContactPageStyled = styled.section`
           width: 100%;
           padding: 0.8rem 1rem;
         }
+      }
+      .form-button {
+        margin-bottom: 2rem;
       }
     }
   }

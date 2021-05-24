@@ -24,6 +24,7 @@ const ButtonStyled = styled.button`
   color: var(--white-color);
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  margin-bottom: 0.6rem;
   &:active,
   &:focus {
     background-color: var(--primary-color);
