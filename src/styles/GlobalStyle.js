@@ -123,9 +123,9 @@ const GlobalStyle = createGlobalStyle`
 .light-dark-mode {
     position: fixed;
     right: 0;
-    top: 5%;
+    top: 50%;
     background-color: var(--background-light-color-2);
-    width: 5.5rem;
+    width: 6rem;
     height: 1.7rem;
     z-index: 15;
     display: flex;
@@ -137,6 +137,29 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.3rem;
       color: var(--white-color);
     }
+  }
+
+ //Nav Toggler
+  .ham-burger-menu{
+      position: absolute;
+      right: 5%;
+      top: 3%; 
+      display: none;
+      z-index: 15;
+      svg{
+          font-size: 3rem;
+      }
+    }
+  .nav-toggle{
+        transform: translateX(0);
+        z-index: 20;
+    }
+
+//Global Media Queries
+@media screen and (max-width: 1200px) {
+  .ham-burger-menu{
+    display: block;
+}
   }
 
 `;

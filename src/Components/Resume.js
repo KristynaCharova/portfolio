@@ -30,7 +30,7 @@ function Resume() {
           />
           <ResumeItem
             year={"2017 - Present"}
-            title={"Full Styck Developer"}
+            title={"Full Stack Developer"}
             subTitle={"Lorem Studios"}
             text={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nihil voluptates ea dolore vel repellat? Quia tenetur non quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. "
